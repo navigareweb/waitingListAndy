@@ -48,7 +48,9 @@ export default function Home() {
         </h4>
         <h5>* lo sconto verrà applicato SOLO all'acquisto in biglietteria</h5>
         <Link
-          href={"mailto:web@navigaresrl.com?subject=Iscrizione Mailing List"}
+          href={
+            "mailto:web@navigaresrl.com?subject=Iscrizione Mailing List Andy Roma"
+          }
         >
           <p>SCRIVICI NOME E COGNOME</p>
         </Link>
