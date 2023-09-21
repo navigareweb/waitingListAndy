@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Waiting List",
+  title: "Waiting List Andy Warhol Roma",
   description: "Iscriviti alla mailing list di NavigareSrl",
 };
 
