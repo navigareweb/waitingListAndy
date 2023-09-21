@@ -1,95 +1,63 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./index.module.scss";
+import copertina from "../public/copertina.jpg";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+      <div className={styles.copertina}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={copertina}
+          width={"100%"}
+          className={"img"}
+          alt="copertina"
         />
+        <p>
+          Apre a Roma, al <strong>Museo della Fanteria</strong>, dal{" "}
+          <strong>21 Ottobre al 17 Marzo</strong>, la mostra monografica
+          dedicata al maestro della Pop Art internazionale{" "}
+          <strong>Andy Warhol</strong>, dal titolo{" "}
+          <strong>Andy Warhol – Universo Warhol</strong>. Con oltre 170 opere,
+          la mostra curata dal celebre <strong>Achille Bonito Oliva</strong>,
+          ripercorre la carriera artistica del genio creativo che ha colorato la
+          grigia quotidianità dell’America del XX secolo, superando i confini di
+          un mondo che si apriva alla globalizzazione.
+        </p>
+        <p>
+          Importante è l’omaggio a <strong>Lucio Amelio</strong>, noto
+          gallerista italiano, scopritore di Warhol. Tra le chicche, i ritratti
+          di Warhol di Christopher Makos, la chitarra autografata dai Rolling
+          Stones con cover firmata, la Skateroomedition, il Catalogo della Tate
+          Gallery 1971 a doppia firma, The Souper Dress firmato e la famosa
+          Brillo Box (after) Serigrafia su legno.
+        </p>
+        <Link
+          href={
+            "https://www.navigaresrl.com/mostra/andy-warhol-universo-warhol/"
+          }
+          className={styles.link}
+        >
+          Info Mostra
+        </Link>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className={styles.iscrizione}>
+        <h4>
+          Iscriviti entro il 20 Ottobre alla nostra Waiting List per ricevere
+          uno sconto del 30%
+        </h4>
+        <h5>* lo sconto verrà applicato SOLO all'acquisto in biglietteria</h5>
+        <Link
+          href={"mailto:web@navigaresrl.com?subject=Iscrizione Mailing List"}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <p>SCRIVICI NOME E COGNOME</p>
+        </Link>
+        <h6>N.B : Cliccando su Invia autorizzi il trattamento dei tuoi dati</h6>
+      </div>
+      <div className={styles.footer}>
+        Una produzione di
+        <Link href={"https://www.navigaresrl.com/"}>NavigareSrl</Link>
       </div>
     </main>
-  )
+  );
 }
